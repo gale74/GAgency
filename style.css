@@ -611,6 +611,9 @@ input[type=text], select, textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
+textarea{
+  height: 20vh;
+}
 .btnContact {
   border: 1px white solid;
   padding: 10px 15px;
