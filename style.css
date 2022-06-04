@@ -594,6 +594,13 @@ header > a:hover {
 .mainContact>h2{
   color: white;
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
 input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
@@ -604,9 +611,6 @@ input[type=text], select, textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-/* Style the submit button with a specific background color etc */
-
-
 .btnContact {
   border: 1px white solid;
   padding: 10px 15px;
@@ -618,6 +622,7 @@ input[type=text], select, textarea {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  max-width: fit-content;
 }
 .btnContact:hover {
   background: rgb(255, 255, 255);
