@@ -517,7 +517,6 @@ header > a:hover {
   border-bottom: #ff8c00 2px solid;
   padding-bottom: 0.7rem;
 }
-
 .content2 > ul {
   display: flex;
   flex-direction: column;
@@ -548,7 +547,6 @@ header > a:hover {
     ),
     url("https://ns.clubmed.com/grc/2022/173/RWD/cm_1_3000x1000_v1.jpg");
 }
-
 .toniBio {
   height: 100vh;
   width: 35%;
@@ -556,6 +554,7 @@ header > a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 .toniBio>h3{
   padding-bottom: 1.5rem;
@@ -580,4 +579,61 @@ header > a:hover {
   width: 100%;
   padding-top:0.4rem ;
 }
+
+
+.mainContact{
+  height: 60vh;
+  background-image: url("https://wallpaperaccess.com/full/2534230.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 4rem;
+}
+.mainContact>h2{
+  color: white;
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+
+
+.btnContact {
+  border: 1px white solid;
+  padding: 10px 15px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  background: darkorange;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+}
+.btnContact:hover {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  border: 1px black solid;
+  transition: all 0.25s ease;
+}
+.container {
+  height: 100vh;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
