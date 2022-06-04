@@ -28,23 +28,18 @@
     </main>
     <div class="container">
       <form action="https://formsubmit.co/c521af8a6c921be1499040bbcb8f0524" method="POST">
-        <input type="text" name="name" required />
-        <input type="email" name="email" required />
-        <button type="submit">Send</button>
-      </form>
-
-      <form method="post" action="https://formspree.io/f/xbjwbrja">
         <label for="fname">First Name</label>
-        <input type="text" name="firstname" placeholder="Your name.." />
+        <input type="text" name="name" placeholder="Your name.." required/>
         <label for="lname">Last Name</label>
-        <input type="text" name="lastname" placeholder="Your last name.." />
+        <input type="email" name="email" placeholder="Your mail.." required/>
         <label for="subject">Subject</label>
         <textarea
           id="subject"
           placeholder="Write something.."
           style="height: 200px"
+          required
         ></textarea>
-        <input type="submit" class="btnContact" value="Submit" />
+        <input type="submit" class="btnContact" value="Submit"/>
       </form>
     </div>
   </body>
