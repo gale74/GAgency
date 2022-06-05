@@ -31,32 +31,45 @@
         action="https://formsubmit.co/goranmarkovic2008@gmail.com"
         method="POST"
       >
-        <label for="name">Name:</label>
+        <label for="name">First name:</label>
         <input
           type="text"
-          name="name"
-          placeholder="Enter your name..."
+          name="firstname"
+          placeholder="Enter your firstname..."
           required
         />
-        <label for="email">Mail:</label>
+         <label for="name">Last name:</label>
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Enter your lastname..."
+          required
+        />
+        <label for="email">Email:</label>
         <input
           type="email"
           name="email"
           placeholder="Enter your email..."
           required
         />
+        <label for="name">Subject:</label>
+        <input
+          type="text"
+          name="subject"
+          placeholder="Enter title of message..."
+          required
+        />
         <label for="message">Message:</label>
         <textarea
           name="message"
           cols="30"
-          rows="10"
-          placeholder="Your message.."
+         
         >
         </textarea>
         <input
           type="hidden"
           name="_next"
-          value="https://gale74.github.io/GAgency/"
+          value="https://gale74.github.io/GAgency/contact.html"
         />
         <button type="submit" class="btnContact">Send</button>
       </form>
