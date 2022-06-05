@@ -27,24 +27,11 @@
       <h2>Contact us</h2>
     </main>
     <div class="container">
-      <form
-        action="https://mailthis.to/goranmarkovic2008@gmail.com"
-        method="POST"
-        enctype="multipart/form-data"
-      >
-        <input type="text" name="name" placeholder="Your name" />
-        <input type="email" name="_replyto" placeholder="Your email" />
-        <textarea
-          name="message"
-          placeholder="Enter your message here"
-          height="300px"
-        ></textarea>
-        
-        <input type="hidden" name="_subject" value="Contact form submitted" />
-        <input type="hidden" name="_after" value="https://goran010.github.io/index.htm" />
-        <input type="hidden" name="_honeypot" value="" />
-        <input type="hidden" name="_confirmation" value="" />
-        <input type="submit" class="btnContact" value="Send" />
+      <form action="https://formsubmit.co/your@email.com" method="POST">
+        <input type="text" name="name" required />
+        <input type="email" name="email" required />
+        <input type="hidden" name="_next" value="https://goran010.github.io/">
+        <button type="submit">Send</button>
       </form>
     </div>
   </body>
