@@ -469,7 +469,6 @@ header > a:hover {
   justify-content: space-evenly;
   align-items: center;
   width: 100vw;
-
 }
 .mainAbout {
   height: 60vh;
@@ -479,7 +478,7 @@ header > a:hover {
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem 4rem;
- background-image: url("https://media.audleytravel.com/-/media/images/home/africa/seychelles/letterbox-images/istock-new/la_digue_seychelles_beach_1212741428_3000x1000.jpg");
+  background-image: url("https://media.audleytravel.com/-/media/images/home/africa/seychelles/letterbox-images/istock-new/la_digue_seychelles_beach_1212741428_3000x1000.jpg");
 }
 .mainAbout > h2 {
   color: #ff8c00;
@@ -556,62 +555,63 @@ header > a:hover {
   justify-content: center;
   margin-bottom: 3rem;
 }
-.toniBio>h3{
+.toniBio > h3 {
   padding-bottom: 1.5rem;
   border-bottom: #ff8c00 2px solid;
   margin-bottom: 2.5rem;
   font-weight: 700;
 }
-.toniBio>img{
+.toniBio > img {
   width: 100%;
-  margin:0%;
+  margin: 0%;
   margin-bottom: 1.5rem;
 }
 .bioText {
   font-size: 1.1rem;
   width: 100%;
   text-align: justify;
-  padding-bottom:1.5rem ;
+  padding-bottom: 1.5rem;
   border-bottom: #ff8c00 2px solid;
 }
-.toniBio>.contactIcons{
+.toniBio > .contactIcons {
   display: flex;
   width: 100%;
-  padding-top:0.4rem ;
+  padding-top: 0.4rem;
 }
 
-
-.mainContact{
+.mainContact {
   height: 60vh;
   background-image: url("https://wallpaperaccess.com/full/2534230.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 2rem 4rem;
 }
-.mainContact>h2{
+.mainContact > h2 {
   color: white;
 }
 
 /*form*/
-form{
+form {
   display: flex;
   flex-direction: column;
   width: 60%;
 }
-input[type=text],input[type=email],textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical 
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
-textarea{
+textarea {
   height: 20vh;
   color: #212121;
 }
@@ -636,7 +636,7 @@ textarea{
 }
 .container {
   height: 100vh;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   width: 70%;
   display: flex;
   align-items: center;
@@ -644,10 +644,46 @@ textarea{
 }
 /*form*/
 
-.destinationInfo{
+.destinationInfo {
   height: 30vh;
+  width: 100%;
   display: flex;
-  align-items: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: 2rem;
+}
+
+footer {
+  height: 40vh;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.378), rgba(0, 0, 0, 0.349)),
+  url("https://www.teahub.io/photos/full/339-3390766_endless-road-black-white.jpg");
+}
+footer>ul{
+width: 30%;
+display: flex;
+flex-direction: column;
+  justify-content: center;
+ 
+}
+footer>ul>h2{
+  width: fit-content;
+  color: #ff8c00;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px darkorange;
+  text-transform: uppercase;
+}
+footer>ul>li{
+
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
 }
