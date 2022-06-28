@@ -9,7 +9,7 @@ fetch("https://api.api-ninjas.com/v1/city?name=" + city, {
     console.log(data);
     //population
     let infoElement = document.createElement("p");
-    infoElement.textContent = "City inhabitants:";
+    infoElement.textContent = "City inhabitants today:";
     let infoText = document.createElement("span");
     infoText.textContent = ` ${data[0].population
       .toString()
@@ -18,17 +18,20 @@ fetch("https://api.api-ninjas.com/v1/city?name=" + city, {
     document.querySelector(".destinationInfo").appendChild(infoElement);
     //population
     //cordinates
+    let cordinatesContainer = document.createElement("div");
+    cordinatesContainer.classList.add("cordinatesContainer");
     let infoElement2 = document.createElement("p");
     infoElement2.textContent = "City latitude:";
     let infoText2 = document.createElement("span");
     infoText2.textContent = ` ${data[0].latitude}`;
     infoElement2.appendChild(infoText2);
-    document.querySelector(".destinationInfo").appendChild(infoElement2);
+    cordinatesContainer.appendChild(infoElement2);
     let infoElement3 = document.createElement("p");
     infoElement3.textContent = "City longitude:";
     let infoText3 = document.createElement("span");
     infoText3.textContent = ` ${data[0].longitude}`;
     infoElement3.appendChild(infoText3);
-    document.querySelector(".destinationInfo").appendChild(infoElement3);
+    cordinatesContainer.appendChild(infoElement3);
+    document.querySelector(".destinationInfo").appendChild(cordinatesContainer);
     //cordinates
   });

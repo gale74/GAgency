@@ -643,47 +643,66 @@ textarea {
   justify-content: center;
 }
 /*form*/
+.cordinatesContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 
+}
 .destinationInfo {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:space-evenly;
   align-items: center;
   font-size: 2rem;
 }
 
 footer {
-  height: 40vh;
+  height: 30vh;
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 0.5rem 4rem;
+  padding-top: 2rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.378), rgba(0, 0, 0, 0.349)),
-  url("https://www.teahub.io/photos/full/339-3390766_endless-road-black-white.jpg");
+    url("https://www.teahub.io/photos/full/339-3390766_endless-road-black-white.jpg");
 }
-footer>ul{
-width: 30%;
-display: flex;
-flex-direction: column;
+.containerFooter{
+ display: flex;
+justify-content: space-between;
+align-items: baseline;
+  width: 100%;
+}
+footer>div > ul {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
- 
 }
-footer>ul>h2{
+footer>div > ul > h2 {
   width: fit-content;
   color: #ff8c00;
-  font-size: 1.5rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
   border-bottom: solid 1px darkorange;
   text-transform: uppercase;
 }
-footer>ul>li{
-
-  font-size: 1.2rem;
+footer >div >ul > li {
+  font-size: 1.1rem;
   margin-top: 0.6rem;
+}
+footer>div>.contactIcons{
+
+}
+footer > h5 {
+margin-top: 1rem;
+padding-top: 0.5rem;
+justify-self: center;
+width:fit-content;
+border-top: #797979 1px solid;
 }
