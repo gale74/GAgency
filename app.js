@@ -35,3 +35,5 @@ fetch("https://api.api-ninjas.com/v1/city?name=" + city, {
     document.querySelector(".destinationInfo").appendChild(cordinatesContainer);
     //cordinates
   });
+
+

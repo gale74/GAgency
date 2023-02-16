@@ -10,13 +10,20 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  height: 10vh;
-  width: 100%;
-  padding: 2.5rem 4rem;
   position: absolute;
   justify-content: space-between;
   align-items: baseline;
   color: white;
+  width: 100%;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+}
+
+header h1 {
+  padding-left: 1rem;
 }
 
 h1 {
@@ -25,7 +32,7 @@ h1 {
   font-family: "Prata", serif;
 }
 
-h1>span {
+h1 > span {
   color: darkorange;
 }
 
@@ -51,18 +58,25 @@ a:hover {
   margin: 0ch;
 }
 
-.navItems>li>a {
+.navItems > li > a {
   color: #e8e8e8;
   padding: 0.3rem 1.5rem 0.4rem 1.5rem;
 }
 
-.navItems>li>a:hover {
+.navItems > li > a:hover {
   color: #f1bf00;
   transition: color 0.3s ease;
   background-color: #21212151;
   border-radius: 1.5rem;
 }
 
+.menu {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
 /*end of navigation*/
 
 /*home page main content*/
@@ -81,20 +95,22 @@ a:hover {
   flex-direction: column;
 }
 
-.homePageText>button {
+.homePageText > button {
   max-width: 35%;
 }
 
 .spain {
   background: #aa151b;
   text-transform: uppercase;
-  background: linear-gradient(to top,
-      #aa151b 0%,
-      #aa151b 33%,
-      #f1bf00 33%,
-      #f1bf00 70%,
-      #aa151b 71%,
-      #aa151b 100%);
+  background: linear-gradient(
+    to top,
+    #aa151b 0%,
+    #aa151b 33%,
+    #f1bf00 33%,
+    #f1bf00 70%,
+    #aa151b 71%,
+    #aa151b 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -110,24 +126,24 @@ h2 {
 }
 
 /*text main page animation*/
-.textAnimateMain>span {
+.textAnimateMain > span {
   opacity: 0;
   filter: blur(4px);
 }
 
-.textAnimateMain>span:nth-child(1) {
+.textAnimateMain > span:nth-child(1) {
   animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.textAnimateMain>span:nth-child(2) {
+.textAnimateMain > span:nth-child(2) {
   animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.textAnimateMain>span:nth-child(3) {
+.textAnimateMain > span:nth-child(3) {
   animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.textAnimateMain>span:nth-child(4) {
+.textAnimateMain > span:nth-child(4) {
   animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
@@ -156,7 +172,7 @@ h2 {
   color: white;
 }
 
-.mainDestinations>p {
+.mainDestinations > p {
   font-size: 1.7rem;
   margin: 0%;
 }
@@ -262,12 +278,12 @@ h2 {
   flex-direction: column;
 }
 
-.card-body>h3 {
+.card-body > h3 {
   font-size: 30px;
   font-weight: 700;
 }
 
-.card-body>.buttonDestination {
+.card-body > .buttonDestination {
   max-width: 60%;
   box-shadow: 4px 3px 15px 2px #878787;
   align-self: flex-end;
@@ -315,34 +331,19 @@ h2 {
   padding: 3rem 4rem;
 }
 
-.cardDestination {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 35vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  transition: all 0.25s ease;
-}
-
 .cardDestination:hover {
   transition: all 0.25s ease;
   transform: scale(1.01);
 }
 
-.cardDestination>h3 {
+.cardDestination > h3 {
   margin-top: 6rem;
   color: #e8e8e8;
   font-weight: 700;
   font-size: 2rem;
 }
 
-.cardDestination>a {
+.cardDestination > a {
   border: 1px transparent solid;
   padding: 10px 15px;
   font-size: 0.6rem;
@@ -360,7 +361,7 @@ h2 {
   transition: all 0.25s ease;
 }
 
-.cardDestination>a:hover {
+.cardDestination > a:hover {
   background: darkorange;
   color: #ffffff;
   border: 1px white solid;
@@ -369,57 +370,69 @@ h2 {
 
 /*end of six cards on destinations page*/
 
-/*home page numbers about agency*/
+/* Styling for numbers */
 .numbersContainer {
-  height: 50vh;
-  color: white;
+  padding: 30px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.566), rgba(0, 0, 0, 0.571)),
     url("images/numbersHomePage.jpg");
-  text-transform: uppercase;
+  text-align: center;
+}
+
+.numbersContainer h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f1bf00;
+}
+
+.numbersContainer2 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 0rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.numbersContainer>h3 {
-  font-size: 36px;
-  font-weight: 700;
-  border-bottom: darkorange solid 2px;
-}
-
-.numbers {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  padding-top: 4rem;
-}
-
-.numberCard {
+.numbersItem1 {
+  width: 100vh;
+  height: 200px;
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  margin: 2rem 0;
+}
+
+.numbersItem1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numberCard img {
+  margin-bottom: 10px;
 }
 
 .number {
   font-size: 40px;
-  font-weight: 900;
+  font-weight: bold;
 }
 
 .description {
-  font-size: 22px;
-  color: darkorange;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /*end of home page numbers about agency*/
 
-header>a {
+header > a {
   color: #ff8c00;
   font-size: 2rem;
 }
 
-header>a:hover {
+header > a:hover {
   color: #ff8c00;
 }
 
@@ -463,14 +476,14 @@ header>a:hover {
     url("https://besttraveltips.net/wp-content/uploads/2015/11/o-VALENCIA-SPAIN-facebook.jpg");
 }
 
-.cityMain>p {
+.cityMain > p {
   color: white;
   margin: 0px;
   font-size: 2rem;
   text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.521);
 }
 
-.cityMain>h2 {
+.cityMain > h2 {
   color: white;
   text-shadow: 3px 2px 3px rgb(0, 0, 0);
 }
@@ -480,6 +493,7 @@ header>a:hover {
   cursor: pointer;
   align-items: center;
   display: flex;
+  padding: 2rem;
 }
 
 .triangle-left {
@@ -492,18 +506,30 @@ header>a:hover {
   margin-right: 4px;
 }
 
+.cityContent {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
 .cityText {
-  text-align: justify;
-  margin: 0%;
+  margin: 0;
+  padding: 0;
   width: 70%;
 }
 
-.cityText>p {
-  line-height: 1.3;
-  text-align: inherit;
-  font-family: "Lato", sans-serif;
-  font-size: 1.05em;
-  margin-bottom: 2rem;
+.cityText > p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.destination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
 }
 
 .cardsContainerCity {
@@ -514,33 +540,30 @@ header>a:hover {
   max-height: 100vh;
 }
 
-.cardsContainerCity>.cardDestination {
-  width: 100%;
-}
-
-.cardsContainerCity>h3 {
-  text-align: center;
-  border-bottom: rgb(255, 104, 3) 2px solid;
-}
-
-.cityContent {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  margin-top: 1rem;
-  padding: 3rem 4rem;
-}
-
-.cityContent:nth-child(2) {
-  flex-grow: 3;
-}
-
-.about {
+.cardDestination {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 100vw;
+  background-color: #f1f1f1;
+  min-width: 30%;
+  height: 200px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.cardDestination:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardDestination h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .mainAbout {
@@ -554,60 +577,49 @@ header>a:hover {
   background-image: url("https://media.audleytravel.com/-/media/images/home/africa/seychelles/letterbox-images/istock-new/la_digue_seychelles_beach_1212741428_3000x1000.jpg");
 }
 
-.mainAbout>h2 {
+.mainAbout > h2 {
   color: #ff8c00;
 }
 
 .aboutContent {
   font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   font-family: serif;
 }
 
-.aboutContent>h3 {
+.aboutContent > h3 {
   text-align: center;
   font-size: 1.9rem;
 }
 
 .content1 {
-  height: 40vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
 }
 
 .content2 {
-  width: 70%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  gap: 2.7rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-.content2>h4 {
+.content2 > h4 {
   font-weight: 700;
   border-bottom: #ff8c00 2px solid;
   padding-bottom: 0.7rem;
+  text-align: center;
+  max-width: fit-content;
+  margin: 1rem auto;
 }
 
-.content2>ul {
+.content2 > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
-  margin: 0%;
-}
-
-.introText {
-  text-align: center;
-  width: 50%;
+  padding: 1rem 3rem;
 }
 
 .sent1 {
@@ -618,34 +630,38 @@ header>a:hover {
 .content3 {
   height: 50vh;
   width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
     url("https://ns.clubmed.com/grc/2022/173/RWD/cm_1_3000x1000_v1.jpg");
 }
 
 .toniBio {
-  height: 110vh;
   width: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  margin: auto;
 }
 
-.toniBio>h3 {
+.toniBio > h3 {
   padding-bottom: 1.5rem;
   border-bottom: #ff8c00 2px solid;
   margin-bottom: 2.5rem;
   font-weight: 700;
 }
 
-.toniBio>img {
+.toniBio > img {
   width: 100%;
   margin: 0%;
   margin-bottom: 1.5rem;
@@ -659,7 +675,7 @@ header>a:hover {
   border-bottom: #ff8c00 2px solid;
 }
 
-.toniBio>.contactIcons {
+.toniBio > .contactIcons {
   display: flex;
   width: 100%;
   padding-top: 0.4rem;
@@ -676,63 +692,48 @@ header>a:hover {
   padding: 2rem 4rem;
 }
 
-.mainContact>h2 {
+.mainContact > h2 {
   color: white;
 }
 
 /*form*/
 form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
+  padding: 1rem;
   flex-direction: column;
-  width: 60%;
+}
+
+label {
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-textarea {
-  height: 20vh;
-  color: #212121;
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-.btnContact {
-  border: 1px white solid;
-  padding: 10px 15px;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  border-radius: 15px;
-  color: rgb(255, 255, 255);
-  background: darkorange;
-  font-weight: 700;
-  font-size: 15px;
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  max-width: fit-content;
-}
-
-.btnContact:hover {
-  background: rgb(255, 255, 255);
-  color: #000000;
-  border: 1px black solid;
-  transition: all 0.25s ease;
-}
-
-.container {
-  height: 100vh;
-  background-color: #ffffff;
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+input[type="submit"]:hover {
+  background-color: #3e8e41;
 }
 
 /*form*/
@@ -741,7 +742,6 @@ textarea {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-
 }
 
 .destinationInfo {
@@ -759,6 +759,7 @@ textarea {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 div.gallery {
@@ -783,52 +784,283 @@ div.desc {
 }
 
 footer {
-  height: 30vh;
-  color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 4rem;
-  padding-top: 2rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.378), rgba(0, 0, 0, 0.349)),
     url("https://www.teahub.io/photos/full/339-3390766_endless-road-black-white.jpg");
 }
 
+/* Footer container */
 .containerFooter {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #999999;
+  padding: 20px;
 }
 
-footer>div>ul {
+/* Footer title styles */
+.containerFooter h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Footer list styles */
+.containerFooter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+}
+
+.containerFooter li {
+  margin-bottom: 10px;
+}
+
+/* Footer link styles */
+.containerFooter a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Contact icons styles */
+.contactIcons {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-footer>div>ul>h2 {
-  width: fit-content;
-  color: #ff8c00;
-  font-size: 1.3rem;
-  border-bottom: solid 1px darkorange;
-  text-transform: uppercase;
+.contactIcons h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white !important;
+  width: 100%;
 }
 
-footer>div>ul>li {
-  font-size: 1.1rem;
-  margin-top: 0.6rem;
+.contactIcons img {
+  margin: 5px;
+  width: 40px;
+}
+.containerFooter h5 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #999;
 }
 
-footer>div>.contactIcons {}
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container #video {
+  width: 100%;
+  height: 900px;
+  border-radius: 20px;
+}
+.container .controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.2;
+  transition: opacity 0.4s;
+}
+.container:hover .controls {
+  opacity: 1;
+}
+.container .controls button {
+  background: transparent;
+  color: #000000;
+  font-weight: bolder;
+  text-shadow: 2px 1px 2px #000;
+  border: none;
+  cursor: pointer;
+}
+.container .controls .timeline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-right: 3px solid #ccc;
+  border-left: 3px solid #ccc;
+}
+.container .controls .timeline .bar {
+  background: rgb(1, 1, 65);
+  height: 4px;
+  flex: 1;
+}
+.container .controls .timeline .bar .inner {
+  background: #ccc;
+  width: 0%;
+  height: 100%;
+}
+.fa {
+  font-size: 20px !important;
+}
 
-footer>h5 {
-  margin-top: 1rem;
-  padding-top: 0.5rem;
-  justify-self: center;
-  width: fit-content;
-  border-top: #797979 1px solid;
+@media screen and (max-width: 800px) {
+  header {
+    justify-content: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 200;
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 2px;
+  }
+
+  .menu .line {
+    background-color: #000;
+    width: 22px;
+    height: 3px;
+  }
+
+  .navItems {
+    flex-direction: column;
+    transition: 500ms;
+    transform: translateY(-400%);
+    z-index: 100;
+    position: absolute;
+  }
+
+  .navItems.active {
+    transform: translateY(0);
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+
+  .cardsContainer {
+    height: 100%;
+    max-width: 480px;
+    margin: auto;
+  }
+
+  .buttonDestination {
+    font-size: small;
+  }
+
+  .numbersContainer2 {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .numbersItem1 {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    height: 1200px;
+  }
+  .card {
+    width: 100%;
+    margin: 3rem 0;
+    height: 100%;
+  }
+  .card-body {
+    height: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  .cityContent {
+    padding: 10px;
+  }
+  .cardsContainerCity {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 100%;
+  }
+  .cardsContainerCity h3 {
+    width: 100%;
+  }
+  .cardsContainerCity a {
+    max-width: 70%;
+    margin-top: 10%;
+  }
+
+  .mainDestinations {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .mainAbout {
+    padding: 2rem 1rem;
+  }
+  .mainDestinations p {
+    font-size: 1.4rem;
+  }
+  .mainDestinations h2 {
+    font-size: 4rem;
+  }
+
+  .container #video {
+    height: 400px;
+  }
+
+  .toniBio {
+    width: 80%;
+  }
+
+  .mainContact {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .homePageText > button {
+    max-width: 80%;
+  }
+
+  .mainHome {
+    padding: 0 1rem;
+  }
+
+  .cityMain {
+    padding: 1rem;
+  }
+
+  .containerFooter {
+    flex-direction: column;
+  }
+
+  .cardDestination {
+    width: 100%;
+  }
+
+  .mainDestinations h2 {
+    font-size: 3.4rem;
+  }
+
+  .containerFooter ul,
+  .containerFooter .contactIcons {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cityText {
+    width: 100%;
+    margin: 0 1rem;
+  }
 }
