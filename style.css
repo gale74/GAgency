@@ -1,0 +1,1108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/*navigation*/
+header {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
+  width: 100%;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+}
+
+header h1 {
+  padding-left: 1rem;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0%;
+  font-family: "Prata", serif;
+}
+
+h1 > span {
+  color: darkorange;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 900;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  list-style-type: none;
+  cursor: pointer;
+  margin: 0ch;
+}
+
+.navItems > li > a {
+  color: #e8e8e8;
+  padding: 0.3rem 1.5rem 0.4rem 1.5rem;
+}
+
+.navItems > li > a:hover {
+  color: #f1bf00;
+  transition: color 0.3s ease;
+  background-color: #21212151;
+  border-radius: 1.5rem;
+}
+
+.menu {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+/*end of navigation*/
+
+/*home page main content*/
+.mainHome {
+  background-image: url("images/homePageCover.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 0rem 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.homePageText {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePageText > button {
+  max-width: 35%;
+}
+
+.spain {
+  background: #aa151b;
+  text-transform: uppercase;
+  background: linear-gradient(
+    to top,
+    #aa151b 0%,
+    #aa151b 33%,
+    #f1bf00 33%,
+    #f1bf00 70%,
+    #aa151b 71%,
+    #aa151b 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5.3rem;
+}
+
+h2 {
+  color: white;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0%;
+  padding: 0%;
+}
+
+/*text main page animation*/
+.textAnimateMain > span {
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.textAnimateMain > span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.textAnimateMain > span:nth-child(2) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.textAnimateMain > span:nth-child(3) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.textAnimateMain > span:nth-child(4) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/*end of text main page animation*/
+/*end of home page main content*/
+
+/*destination page*/
+.mainDestinations {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.071), rgba(0, 0, 0, 0.407)),
+    url("images/destinationsCover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  padding: 0rem 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: white;
+}
+
+.mainDestinations > p {
+  font-size: 1.7rem;
+  margin: 0%;
+}
+
+/*end destination page*/
+
+/* button slide orange on home page*/
+.buttonDestination {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 15px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.buttonDestination::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #ff8c00;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.buttonDestination:hover {
+  color: #e8e8e8;
+}
+
+.buttonDestination:hover::before {
+  width: 100%;
+}
+
+/*end button slide orange on home page*/
+
+/*three cards on home page*/
+.cardsContainer {
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 3rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: -35%;
+  height: 60vh;
+  width: 100%;
+}
+
+.card {
+  width: 30%;
+  box-shadow: none;
+  border: none;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2rem);
+  transition: all 0.3s ease;
+}
+
+.cardBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 55%;
+}
+
+.card3Background {
+  background-image: url("images/MADRID.jpg");
+}
+
+.card2Background {
+  background-image: url("images/sansebastian1.jpg");
+}
+
+.card1Background {
+  background-image: url("images/zaragoza1.jpg");
+}
+
+.card-body {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body > h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.card-body > .buttonDestination {
+  max-width: 60%;
+  box-shadow: 4px 3px 15px 2px #878787;
+  align-self: flex-end;
+}
+
+/*end of three cards on home page */
+
+/*six cards on destinations page page*/
+.cardDestination1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.329)),
+    url(https://www.integral-zagreb.hr/sites/default/files/uploads/inline-images/GRAN-VIA-MADRID.jpg);
+}
+
+.cardDestination2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.329)),
+    url(https://img2.10bestmedia.com/Images/Photos/378847/GettyImages-1085317916_54_990x660.jpg);
+}
+
+.cardDestination3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.329)),
+    url(https://www.planetware.com/wpimages/2019/07/spain-best-places-to-visit-san-sebastian.jpg);
+}
+
+.cardDestination4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.329)),
+    url(https://www.travelsewhere.net/wp-content/uploads/2021/03/DSC_0200-5.jpg);
+}
+
+.cardDestination5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.329)),
+    url(https://www.planetware.com/wpimages/2019/07/spain-best-places-to-visit-valencia.jpg);
+}
+
+.cardDestination6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.329)),
+    url(https://www.planetware.com/wpimages/2019/07/spain-best-places-to-visit-granada.jpg);
+}
+
+.cardsContainerDestinations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  padding: 3rem 4rem;
+}
+
+.cardDestination:hover {
+  transition: all 0.25s ease;
+  transform: scale(1.01);
+}
+
+.cardDestination > h3 {
+  margin-top: 6rem;
+  color: #e8e8e8;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.cardDestination > a {
+  border: 1px transparent solid;
+  padding: 10px 15px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  border: unset;
+  border-radius: 15px;
+  color: rgb(24, 24, 24);
+  z-index: 1;
+  background: #ffffff;
+  position: relative;
+  font-weight: 1000;
+  font-size: 15px;
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.cardDestination > a:hover {
+  background: darkorange;
+  color: #ffffff;
+  border: 1px white solid;
+  transition: all 0.25s ease;
+}
+
+/*end of six cards on destinations page*/
+
+/* Styling for numbers */
+.numbersContainer {
+  padding: 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.566), rgba(0, 0, 0, 0.571)),
+    url("images/numbersHomePage.jpg");
+  text-align: center;
+}
+
+.numbersContainer h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f1bf00;
+}
+
+.numbersContainer2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.numbersItem1 {
+  width: 100vh;
+  height: 200px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  margin: 2rem 0;
+}
+
+.numbersItem1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numberCard img {
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*end of home page numbers about agency*/
+
+header > a {
+  color: #ff8c00;
+  font-size: 2rem;
+}
+
+header > a:hover {
+  color: #ff8c00;
+}
+
+.cityMain {
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 4rem;
+}
+
+.cityMainMadrid {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.349)),
+    url("https://pix10.agoda.net/geo/city/5531/1_5531_02.jpg?ca=6&ce=1&s=1920x822");
+}
+
+.cityMainBarcelona {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.349)),
+    url("https://img.freepik.com/free-photo/passeig-de-colom-barcelona-catalonia-spain_218319-7448.jpg?w=2000");
+}
+
+.cityMainSanSebastian {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.349)),
+    url("https://images.ansharimages.com/photo/spain/san-sebastian/kursaal-bridge-san-sebastian-spain.jpg");
+}
+
+.cityMainZaragoza {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.349)),
+    url("https://wallpaperaccess.com/full/2534230.jpg");
+}
+
+.cityMainGrenada {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.349)),
+    url("https://wallpaperaccess.com/full/411360.jpg");
+}
+
+.cityMainValencia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.349)),
+    url("https://besttraveltips.net/wp-content/uploads/2015/11/o-VALENCIA-SPAIN-facebook.jpg");
+}
+
+.cityMain > p {
+  color: white;
+  margin: 0px;
+  font-size: 2rem;
+  text-shadow: 4px 3px 4px rgba(0, 0, 0, 0.521);
+}
+
+.cityMain > h2 {
+  color: white;
+  text-shadow: 3px 2px 3px rgb(0, 0, 0);
+}
+
+.goBackButton {
+  color: #ff8c00;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  padding: 2rem;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 28px solid #ff8c00;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.cityContent {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.cityText {
+  margin: 0;
+  padding: 0;
+  width: 70%;
+}
+
+.cityText > p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.destination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+
+.cardsContainerCity {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  max-height: 100vh;
+}
+
+.cardDestination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  min-width: 30%;
+  height: 200px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.cardDestination:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardDestination h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mainAbout {
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 4rem;
+  background-image: url("https://media.audleytravel.com/-/media/images/home/africa/seychelles/letterbox-images/istock-new/la_digue_seychelles_beach_1212741428_3000x1000.jpg");
+}
+
+.mainAbout > h2 {
+  color: #ff8c00;
+}
+
+.aboutContent {
+  font-size: 1.2rem;
+
+  font-family: serif;
+}
+
+.aboutContent > h3 {
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+.content1 {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.content2 {
+  max-width: 900px;
+  margin: auto;
+}
+
+.content2 > h4 {
+  font-weight: 700;
+  border-bottom: #ff8c00 2px solid;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  max-width: fit-content;
+  margin: 1rem auto;
+}
+
+.content2 > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 1rem 3rem;
+}
+
+.sent1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.content3 {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("https://ns.clubmed.com/grc/2022/173/RWD/cm_1_3000x1000_v1.jpg");
+}
+
+.toniBio {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin: auto;
+}
+
+.toniBio > h3 {
+  padding-bottom: 1.5rem;
+  border-bottom: #ff8c00 2px solid;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.toniBio > img {
+  width: 100%;
+  margin: 0%;
+  margin-bottom: 1.5rem;
+}
+
+.bioText {
+  font-size: 1.1rem;
+  width: 100%;
+  text-align: justify;
+  padding-bottom: 1.5rem;
+  border-bottom: #ff8c00 2px solid;
+}
+
+.toniBio > .contactIcons {
+  display: flex;
+  width: 100%;
+  padding-top: 0.4rem;
+}
+
+.mainContact {
+  height: 60vh;
+  background-image: url("https://wallpaperaccess.com/full/2534230.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 4rem;
+}
+
+.mainContact > h2 {
+  color: white;
+}
+
+/*form*/
+form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btnContact {
+  border: 1px white solid;
+  padding: 10px 15px;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  background: darkorange;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 4px 8px 19px -3px rgb(0 0 0 / 27%);
+  max-width: fit-content;
+}
+
+/*form*/
+.cordinatesContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.destinationInfo {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.photos {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 230px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+footer {
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 4rem;
+  padding-top: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.378), rgba(0, 0, 0, 0.349)),
+    url(https://www.teahub.io/photos/full/339-3390766_endless-road-black-white.jpg);
+}
+
+/* Footer container */
+.containerFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Footer title styles */
+.containerFooter h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Footer list styles */
+.containerFooter ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+}
+
+.containerFooter li {
+  margin-bottom: 10px;
+}
+
+/* Footer link styles */
+.containerFooter a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Contact icons styles */
+.contactIcons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contactIcons h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white !important;
+  width: 100%;
+}
+
+.contactIcons img {
+  margin: 5px;
+  width: 40px;
+}
+.containerFooter h5 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+footer > div > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer > div > ul > h2 {
+  width: fit-content;
+  color: #ff8c00;
+  font-size: 1.3rem;
+  border-bottom: solid 1px darkorange;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+footer > div > ul > li {
+  font-size: 1.1rem;
+  margin-top: 0.6rem;
+}
+
+footer > h5 {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  justify-self: center;
+  width: fit-content;
+  border-top: #797979 1px solid;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container #video {
+  width: 100%;
+  height: 900px;
+  border-radius: 20px;
+}
+.container .controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.2;
+  transition: opacity 0.4s;
+}
+.container:hover .controls {
+  opacity: 1;
+}
+.container .controls button {
+  background: transparent;
+  color: #000000;
+  font-weight: bolder;
+  text-shadow: 2px 1px 2px #000;
+  border: none;
+  cursor: pointer;
+}
+.container .controls .timeline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-right: 3px solid #ccc;
+  border-left: 3px solid #ccc;
+}
+.container .controls .timeline .bar {
+  background: rgb(1, 1, 65);
+  height: 4px;
+  flex: 1;
+}
+.container .controls .timeline .bar .inner {
+  background: #ccc;
+  width: 0%;
+  height: 100%;
+}
+.fa {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    justify-content: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 200;
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 2px;
+  }
+
+  .menu .line {
+    background-color: #000;
+    width: 22px;
+    height: 3px;
+  }
+
+  .navItems {
+    flex-direction: column;
+    transition: 500ms;
+    transform: translateY(-400%);
+    z-index: 100;
+    position: absolute;
+  }
+
+  .navItems.active {
+    transform: translateY(0);
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    position: absolute;
+    top: 0;
+  }
+
+  .cardsContainer {
+    height: 100%;
+    max-width: 480px;
+    margin: auto;
+  }
+
+  .buttonDestination {
+    font-size: small;
+  }
+
+  .numbersContainer2 {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .numbersItem1 {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    height: 1200px;
+  }
+  .card {
+    width: 100%;
+    margin: 3rem 0;
+    height: 100%;
+  }
+  .card-body {
+    height: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  .cityContent {
+    padding: 10px;
+  }
+  .cardsContainerCity {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 100%;
+  }
+  .cardsContainerCity h3 {
+    width: 100%;
+  }
+  .cardsContainerCity a {
+    max-width: 70%;
+    margin-top: 10%;
+  }
+
+  .mainDestinations {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .mainAbout {
+    padding: 2rem 1rem;
+  }
+  .mainDestinations p {
+    font-size: 1.4rem;
+  }
+  .mainDestinations h2 {
+    font-size: 4rem;
+  }
+
+  .container #video {
+    height: 400px;
+  }
+
+  .toniBio {
+    width: 80%;
+  }
+
+  .mainContact {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hidden-mobile {
+    display: none;
+  }
+  .homePageText > button {
+    max-width: 80%;
+  }
+
+  .mainHome {
+    padding: 0 1rem;
+  }
+
+  .cityMain {
+    padding: 1rem;
+  }
+
+  .containerFooter {
+    flex-direction: column;
+  }
+
+  .cardDestination {
+    width: 100%;
+  }
+
+  .mainDestinations h2 {
+    font-size: 3.4rem;
+  }
+
+  .containerFooter ul,
+  .containerFooter .contactIcons {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cityText {
+    width: 100%;
+    margin: 0 1rem;
+  }
+}
